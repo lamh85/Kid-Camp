@@ -2,13 +2,13 @@ Rails.application.routes.draw do
 
   root "pages#index"
 
-  root "counselor" => "pages#counselor"
+  get "counselor" => "pages#counselor"
 
-  root "stories" => "pages#stories"  
+  get "stories" => "pages#stories"  
 
-  root "first_aid" => "pages#first_aid"
+  get "first_aid" => "pages#first_aid"
 
-  root "wildfire" => "pages#wildfire"
+  get "wildfire" => "pages#wildfire"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
