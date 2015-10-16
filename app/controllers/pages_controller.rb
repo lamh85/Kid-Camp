@@ -1,2 +1,23 @@
 class PagesController < ApplicationController
+
+  def index
+    render 'index'
+  end
+
+  def counselor
+    render 'counselor'
+  end
+
+  def stories
+    render 'stories'
+  end
+
+  def first_aid
+    render 'first_aid'
+  end
+
+  def wildfire
+    render 'wildfire'
+  end
+
 end
