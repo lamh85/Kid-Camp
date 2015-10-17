@@ -1,7 +1,52 @@
-*, a, a:hover, a:active {
+*, a {
     color: white;
+}
+
+.nav > li > a:active i,
+.nav > li > a:active .glyphicon,
+.nav > li > a:focus i,
+.nav > li > a:focus .glyphicon,
+.nav > li > a:hover i,
+.nav > li > a:hover .glyphicon {
+    background-color: white;
+    color: black;
 }
 
 body {
     background-color: black;
+}
+
+input.form-control {
+    background-color: black;
+    border: none;
+    border-bottom: 1px solid white;
+    border-radius: 0;
+}
+
+button.btn-default {
+    border-radius: 0;
+}
+
+input::-webkit-input-placeholder {
+    color: white;
+    text-transform: uppercase;
+}
+input::-moz-placeholder {
+    color: white;
+    text-transform: uppercase;
+}
+input:-moz-placeholder {   /* Older versions of Firefox */
+    color: white;
+    text-transform: uppercase;
+}
+input:-ms-input-placeholder { 
+    color: white;
+    text-transform: uppercase;
+}
+
+#panel {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);    
 }
