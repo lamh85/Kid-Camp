@@ -1,11 +1,19 @@
-*, a {
+*, a,
+input.form-control {
     color: white;
 }
 
+.nav > li > a {
+    font-size: 2em;
+}
+
+.nav > li > a:active,
 .nav > li > a:active i,
 .nav > li > a:active .glyphicon,
+.nav > li > a:focus,
 .nav > li > a:focus i,
 .nav > li > a:focus .glyphicon,
+.nav > li > a:hover,
 .nav > li > a:hover i,
 .nav > li > a:hover .glyphicon {
     background-color: white;
@@ -17,31 +25,36 @@ body {
 }
 
 input.form-control {
+    color: white;
+    padding: 0.5em 0;
+    font-size: 1.5em;
+    height: auto;
     background-color: black;
     border: none;
-    border-bottom: 1px solid white;
+    border-bottom: 3px solid white;
     border-radius: 0;
 }
 
 button.btn-default {
     border-radius: 0;
+    width: 100%;
 }
 
 input::-webkit-input-placeholder {
+    font-weight: bold;    
     color: white;
-    text-transform: uppercase;
 }
 input::-moz-placeholder {
+    font-weight: bold;    
     color: white;
-    text-transform: uppercase;
 }
 input:-moz-placeholder {   /* Older versions of Firefox */
+    font-weight: bold;    
     color: white;
-    text-transform: uppercase;
 }
 input:-ms-input-placeholder { 
+    font-weight: bold;    
     color: white;
-    text-transform: uppercase;
 }
 
 #panel {
