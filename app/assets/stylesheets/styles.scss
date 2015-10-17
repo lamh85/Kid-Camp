@@ -1,3 +1,5 @@
+$white-trans: rgba(255, 255, 255, 0.4);
+
 *, h1, a,
 input.form-control {
     color: white;
@@ -23,15 +25,16 @@ body {
 }
 
 .nav-pills > li.active > a,
-.nav-pills > li.active > a i,
 .nav > li > a:active,
-.nav > li > a:active i,
 .nav > li > a:focus,
-.nav > li > a:focus i,
-.nav > li > a:hover,
-.nav > li > a:hover i {
-    background-color: white !important;
+.nav > li > a:hover {
+    background-color: $white-trans !important;
     color: black !important;
+}
+
+.nav-pills > li.active > a i.fa,
+.nav > li > a:hover i.fa {
+    color: black;
 }
 
 #veil {
@@ -57,6 +60,7 @@ input.form-control {
 }
 
 button.btn-default {
+    font-weight: 100;
     border-radius: 0;
     width: 100%;
 }
