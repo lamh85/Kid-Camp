@@ -1,7 +1,7 @@
 /* Variables */
 /*-----------*/
 
-$white-trans: rgba(255, 255, 255, 0.4);
+$white-trans: rgba(255, 255, 255, 0.6);
 $space-sm: 10px;
 $space-lg: 20px;
 
@@ -92,24 +92,17 @@ input.form-control:-ms-input-placeholder {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+    background-attachment: fixed;    
 }
 
 /* IDs */
 /*-----*/
 
 #veil {
-    background-color: rgba(0,0,0,0.2);
+    background-color: rgba(0,0,0,0.4);
     position: absolute;
     left: 0px;
     top: 0px;
-}
-
-
-#panel {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);    
 }
 
 #counselor {
@@ -131,7 +124,20 @@ input.form-control:-ms-input-placeholder {
 /* Media Queries */
 /*---------------*/
 
+@media (min-width: 992px) {
+    #panel {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);    
+    }
+}
+
 @media (max-width: 991px) {
+    #panel {
+        width: 100%;
+    }
+
     #panel-left {
         margin-bottom: $space-lg;
     }
