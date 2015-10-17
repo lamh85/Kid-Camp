@@ -1,6 +1,21 @@
-*, a,
+*, h1, a,
 input.form-control {
     color: white;
+    font-weight: 100;
+}
+
+/* Large margin */
+h1 {
+    margin: 0 0 20px;
+}
+
+/* Small margin */
+.form-group {
+    margin-bottom: 0 0 10px;
+}
+
+body {
+    overflow: scroll;
 }
 
 .nav > li > a {
@@ -19,18 +34,25 @@ input.form-control {
     color: black !important;
 }
 
-body {
-    background-color: black;
+#veil {
+    background-color: rgba(0,0,0,0.5);
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+input.form-control, button.btn-default {
+    padding: 0.5em;
+    font-size: 1.5em;
+    letter-spacing: 1px;
 }
 
 input.form-control {
     color: white;
-    padding: 0.5em 0;
-    font-size: 1.5em;
     height: auto;
-    background-color: black;
+    background-color: rgba(0,0,0,0);
     border: none;
-    border-bottom: 3px solid white;
+    border-bottom: 1px dashed white;
     border-radius: 0;
 }
 
@@ -39,20 +61,16 @@ button.btn-default {
     width: 100%;
 }
 
-input::-webkit-input-placeholder {
-    font-weight: bold;    
+input.form-control::-webkit-input-placeholder {
     color: white;
 }
-input::-moz-placeholder {
-    font-weight: bold;    
+input.form-control::-moz-placeholder {
     color: white;
 }
-input:-moz-placeholder {   /* Older versions of Firefox */
-    font-weight: bold;    
+input.form-control:-moz-placeholder {   /* Older versions of Firefox */
     color: white;
 }
-input:-ms-input-placeholder { 
-    font-weight: bold;    
+input.form-control:-ms-input-placeholder { 
     color: white;
 }
 
@@ -61,4 +79,33 @@ input:-ms-input-placeholder {
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);    
+}
+
+.tab-content {
+    height: 100%;
+    width: 100%;
+}
+
+.tab-pane {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#counselor {
+    background-image: url('counselor.jpg');
+}
+
+#stories {
+    background-image: url('stories.jpg');
+}
+
+#aid {
+    background-image: url('aid.jpg');
+}
+
+#wildfire {
+    background-image: url('wildfire.jpg');
 }
