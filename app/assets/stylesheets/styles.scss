@@ -98,7 +98,7 @@ input.form-control:-ms-input-placeholder {
 /*-----*/
 
 #veil {
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0,0,0,0.2);
     position: absolute;
     left: 0px;
     top: 0px;
@@ -113,19 +113,19 @@ input.form-control:-ms-input-placeholder {
 }
 
 #counselor {
-    background-image: url('counselor.jpg');
+    background-image: url(image-path('counselor.jpg'));
 }
 
 #stories {
-    background-image: url('stories.jpg');
+    background-image: url(image-path('stories.jpg'));
 }
 
 #aid {
-    background-image: url('aid.jpg');
+    background-image: url(image-path('aid.jpg'));
 }
 
 #wildfire {
-    background-image: url('wildfire.jpg');
+    background-image: url(image-path('wildfire.jpg'));
 }
 
 /* Media Queries */
