@@ -1,4 +1,12 @@
+/* Variables */
+/*-----------*/
+
 $white-trans: rgba(255, 255, 255, 0.4);
+$space-sm: 10px;
+$space-lg: 20px;
+
+/* Elements without classes and IDs */
+/*----------------------------------*/
 
 *, h1, a,
 input.form-control {
@@ -6,42 +14,37 @@ input.form-control {
     font-weight: 100;
 }
 
-/* Large margin */
 h1 {
-    margin: 0 0 20px;
+    margin: 0 0 $space-lg;
 }
 
-/* Small margin */
-.form-group {
-    margin-bottom: 0 0 10px;
-}
-
-body {
-    overflow: scroll;
-}
+/* Classes */
+/*---------*/
 
 .nav > li > a {
     font-size: 2em;
+    border-radius: 0;
 }
 
 .nav-pills > li.active > a,
-.nav > li > a:active,
-.nav > li > a:focus,
-.nav > li > a:hover {
+.nav-pills > li > a:active,
+.nav-pills > li > a:focus,
+.nav-pills > li > a:hover {
     background-color: $white-trans !important;
     color: black !important;
 }
 
 .nav-pills > li.active > a i.fa,
-.nav > li > a:hover i.fa {
+.nav-pills > li > a:hover i.fa {
     color: black;
 }
 
-#veil {
-    background-color: rgba(0,0,0,0.5);
-    position: absolute;
-    left: 0px;
-    top: 0px;
+.nav-pills i.fa {
+    margin-right: $space-sm;
+}
+
+.form-group {
+    margin-bottom: 0 0 $space-sm;
 }
 
 input.form-control, button.btn-default {
@@ -78,13 +81,6 @@ input.form-control:-ms-input-placeholder {
     color: white;
 }
 
-#panel {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);    
-}
-
 .tab-content {
     height: 100%;
     width: 100%;
@@ -96,6 +92,24 @@ input.form-control:-ms-input-placeholder {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+}
+
+/* IDs */
+/*-----*/
+
+#veil {
+    background-color: rgba(0,0,0,0.5);
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+
+#panel {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);    
 }
 
 #counselor {
@@ -112,4 +126,13 @@ input.form-control:-ms-input-placeholder {
 
 #wildfire {
     background-image: url('wildfire.jpg');
+}
+
+/* Media Queries */
+/*---------------*/
+
+@media (max-width: 991px) {
+    #panel-left {
+        margin-bottom: $space-lg;
+    }
 }
