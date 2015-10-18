@@ -94,26 +94,31 @@ button.btn-default {
 /* Form Placeholder */
 /*------------------*/
 
-textarea.form-control::-webkit-textarea-placeholder,
 input.form-control::-webkit-input-placeholder {
-    color: white;
+    color: $white-trans;
 }
-
-textarea.form-control::-moz-placeholder,
 input.form-control::-moz-placeholder {
-    color: white;
+    color: $white-trans;
 }
-
-textarea.form-control:-moz-placeholder,
-input.form-control:-moz-placeholder {   /* Older versions of Firefox */
-    color: white;
+input.form-control:-moz-placeholder {
+    color: $white-trans;
 }
-
-textarea.form-control:-ms-textarea-placeholder,
 input.form-control:-ms-input-placeholder { 
-    color: white;
+    color: $white-trans;
 }
 
+textarea.form-control::-webkit-input-placeholder {
+    color: $white-trans;
+}
+textarea.form-control::-moz-placeholder {
+    color: $white-trans;
+}
+textarea.form-control:-moz-placeholder {
+    color: $white-trans;
+}
+textarea.form-control:-ms-input-placeholder { 
+    color: $white-trans;
+}
 
 /* Panel Containers */
 /*------------------*/
