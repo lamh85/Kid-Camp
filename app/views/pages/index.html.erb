@@ -43,19 +43,19 @@
                 <ul class="nav nav-pills nav-stacked" role="tablist" id="nav-activities">
                     <li role="presentation" class="active">
                         <a href="#counselor" aria-controls="counselor" role="tab" data-toggle="tab">
-                            <i class="fa fa-info-circle icon"></i> Camp Counselor
+                            <i class="fa fa-info-circle icon"></i>Camp Counselor
                         </a>
                     </li>
                     <li role="presentation">
                         <a href="#stories" aria-controls="stories" role="tab" data-toggle="tab">
-                            <i class="fa fa-fire"></i> Campfire Stories
+                            <i class="fa fa-fire"></i>Campfire Stories
                         </a>
                     </li>
                     <li role="presentation">
-                        <a href="#aid" aria-controls="aid" role="tab" data-toggle="tab"><i class="fa fa-medkit"></i> First Aid wee training</a>
+                        <a href="#aid" aria-controls="aid" role="tab" data-toggle="tab"><i class="fa fa-medkit"></i>First Aid wee training</a>
                     </li>
                     <li role="presentation">
-                        <a href="#wildfire" aria-controls="wildfire" role="tab" data-toggle="tab"><i class="fa fa-binoculars"></i> Wildfire Spotting</a>
+                        <a href="#wildfire" aria-controls="wildfire" role="tab" data-toggle="tab"><i class="fa fa-binoculars"></i>Wildfire Spotting</a>
                     </li>
                 </ul>
             </div>
@@ -124,10 +124,10 @@ $('document').ready(function(){
     });
 
     var resizeBody = function(){
-        widthWindow = $(window).width();
-        widthPanel = $('#panel').width();
-        heightWindow = $(window).height();
-        heightPanel = $('#panel').height();
+        widthWindow = $(window).outerWidth();
+        widthPanel = $('#panel').outerWidth();
+        heightWindow = $(window).outerHeight();
+        heightPanel = $('#panel').outerHeight();
 
         widthNew = (widthWindow > widthPanel)? widthWindow : widthPanel;
         heightNew = (heightWindow > heightPanel)? heightWindow : heightPanel;
