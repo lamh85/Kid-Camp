@@ -6,31 +6,33 @@
 Sequence of property-value pairs -- inner-box model (color, font-weight, etc), then outer-box model (border, margin, etc.); */
 
 /* Variables */
-/*=>-------<=*/
+/*=--------<=*/
 
 $white-trans: rgba(255, 255, 255, 0.6);
 $font-size-form: 1.5em;
 $bg-trans: rgba(0,0,0,0);
-$border-style: 1px dashed white;
 $space-sm: 10px;
 $space-lg: 20px;
 
 /* Elements without classes and IDs */
 /*=>------------------------------<=*/
 
-/* Class */
-* {
+%reset-font {
     color: white;
     font-weight: 100;
     letter-spacing: 1px;
 }
 
+* {
+    @extend %reset-font
+}
+
 a {
-    @extend *;
+    @extend %reset-font;
 }
 
 h1 {
-    @extend *;
+    @extend %reset-font;
     font-size: 4em;
     margin: 0 0 $space-lg;
 }
@@ -108,17 +110,24 @@ h1 {
 /* Form */
 /*=>--<=*/
 
-/* Class */
-input.form-control {
-    @extend *;
+%reset-border {
+    border: none;
+    border-bottom: 1px dashed white;
+    border-radius: 0;
+}
+
+%field {
+    @extend %reset-font;
     color: white;
     font-size: $font-size-form;
     height: auto;
     background-color: $bg-trans;
     padding: 0.5em;
-    border: none;
-    border-bottom: $border-style;
-    border-radius: 0;
+    @extend %reset-border;
+}
+
+input.form-control {
+    @extend %field;
 }
 
 .form-group {
@@ -126,7 +135,7 @@ input.form-control {
 }
 
 textarea.form-control {
-    @extend input.form-control;
+    @extend %field;
 }
 
 button.btn-default {
@@ -142,9 +151,7 @@ button.btn-default {
 .input-group-addon {
     background-color: $bg-trans;
     padding: 0.5em 0;
-    border: none;
-    border-bottom: $border-style;
-    border-radius: 0;
+    @extend %reset-border;
 }
 
 .input-group-addon .fa {
@@ -155,6 +162,8 @@ button.btn-default {
 
 /* Form Placeholder */
 /*=>--------------<=*/
+
+/* DO NOT GROUP SELECTORS. Otherwise will not function */
 
 input.form-control::-webkit-input-placeholder {
     color: $white-trans;
@@ -209,5 +218,5 @@ textarea.form-control:-ms-input-placeholder {
     #panel-left {
         margin-bottom: $space-lg;
     }
-    
+
 }
