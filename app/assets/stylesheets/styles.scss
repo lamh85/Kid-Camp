@@ -1,22 +1,19 @@
 /* Code Design */
-/*-------------*/
+/*=>---------<=*/
 
-/*
-Sequence of sections -- common HTML tags (eg: h1, a, etc.), top-level HTML tags, left-side tags, then right-side tags.
+/* Sequence of sections -- common HTML tags (eg: h1, a, etc.), top-level HTML tags, left-side tags, right-side tags, then media queries.
 
-Sequence of property-value pairs -- inner-box model (color, font-weight, etc), then outer-box model (border, margin, etc.);
-*/
-
+Sequence of property-value pairs -- inner-box model (color, font-weight, etc), then outer-box model (border, margin, etc.); */
 
 /* Variables */
-/*-----------*/
+/*=>-------<=*/
 
 $white-trans: rgba(255, 255, 255, 0.6);
 $space-sm: 10px;
 $space-lg: 20px;
 
 /* Elements without classes and IDs */
-/*----------------------------------*/
+/*=>------------------------------<=*/
 
 *, h1, a,
 textarea.form-control,
@@ -26,127 +23,25 @@ input.form-control {
 }
 
 h1 {
-    margin: 0 0 $space-lg;
     font-size: 4em;
-}
-
-/* Activities */
-/*------------*/
-
-.nav > li > a {
-    font-size: 2em;
-    border-radius: 0;
-}
-
-.nav-pills > li.active > a,
-.nav-pills > li > a:active,
-.nav-pills > li > a:focus,
-.nav-pills > li > a:hover {
-    background-color: $white-trans !important;
-    color: black !important;
-}
-
-.nav-pills > li.active > a i.fa,
-.nav-pills > li > a:hover i.fa {
-    color: black;
-}
-
-.nav-pills i.fa {
-    margin-right: $space-lg;
-}
-
-/* Form */
-/*------*/
-
-.form-group {
-    margin-bottom: 0 0 $space-sm;
-}
-
-textarea.form-control,
-input.form-control,
-button.btn-default {
-    padding: 0.5em;
-    font-size: 1.5em;
-    letter-spacing: 1px;
-}
-
-textarea.form-control,
-input.form-control {
-    color: white;
-    height: auto;
-    background-color: rgba(0,0,0,0);
-    border: none;
-    border-bottom: 1px dashed white;
-    border-radius: 0;
-}
-
-button.btn-default {
-    font-weight: 100;
-    border-radius: 0;
-    width: 100%;
-}
-
-/* Input Groups */
-/*--------------*/
-
-.input-group-addon {
-    background-color: rgba(0,0,0,0);
-    border: none;
-    border-bottom: 1px dashed white;
-    border-radius: 0;
-    padding: 0.5em 0;
-}
-
-.input-group-addon .fa {
-    font-size: 2.5em;
-    color: $white-trans;
-    transform: rotate(45deg);
-}
-
-/* Form Placeholder */
-/*------------------*/
-
-input.form-control::-webkit-input-placeholder {
-    color: $white-trans;
-}
-input.form-control::-moz-placeholder {
-    color: $white-trans;
-}
-input.form-control:-moz-placeholder {
-    color: $white-trans;
-}
-input.form-control:-ms-input-placeholder { 
-    color: $white-trans;
-}
-
-textarea.form-control::-webkit-input-placeholder {
-    color: $white-trans;
-}
-textarea.form-control::-moz-placeholder {
-    color: $white-trans;
-}
-textarea.form-control:-moz-placeholder {
-    color: $white-trans;
-}
-textarea.form-control:-ms-input-placeholder { 
-    color: $white-trans;
+    margin: 0 0 $space-lg;
 }
 
 /* Panel Containers */
-/*------------------*/
+/*=>--------------<=*/
 
 .tab-content {
-    height: 100%;
     width: 100%;
+    height: 100%;
 }
 
 .tab-pane {
-    height: 100%;
-    width: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
     background-position: center center;
+    background-repeat: no-repeat;
     background-attachment: fixed;    
+    background-size: cover;
+    width: 100%;
+    height: 100%;
 }
 
 #counselor {
@@ -177,15 +72,117 @@ textarea.form-control:-ms-input-placeholder {
     padding-bottom: $space-lg;
 }
 
+/* Activities */
+/*=>--------<=*/
+
+.nav > li > a {
+    font-size: 2em;
+    border-radius: 0;
+}
+
+.nav-pills > li.active > a,
+.nav-pills > li > a:active,
+.nav-pills > li > a:focus,
+.nav-pills > li > a:hover {
+    color: black !important;
+    background-color: $white-trans !important;
+}
+
+.nav-pills > li.active > a i.fa,
+.nav-pills > li > a:hover i.fa {
+    color: black;
+}
+
+.nav-pills i.fa {
+    margin-right: $space-lg;
+}
+
+/* Form */
+/*=>--<=*/
+
+.form-group {
+    margin-bottom: 0 0 $space-sm;
+}
+
+textarea.form-control,
+input.form-control,
+button.btn-default {
+    font-size: 1.5em;
+    letter-spacing: 1px;
+    padding: 0.5em;
+}
+
+textarea.form-control,
+input.form-control {
+    color: white;
+    height: auto;
+    background-color: rgba(0,0,0,0);
+    border: none;
+    border-bottom: 1px dashed white;
+    border-radius: 0;
+}
+
+button.btn-default {
+    font-weight: 100;
+    width: 100%;
+    border-radius: 0;
+}
+
+/* Input Groups */
+/*=>----------<=*/
+
+.input-group-addon {
+    background-color: rgba(0,0,0,0);
+    padding: 0.5em 0;
+    border: none;
+    border-bottom: 1px dashed white;
+    border-radius: 0;
+}
+
+.input-group-addon .fa {
+    color: $white-trans;
+    font-size: 2.5em;
+    transform: rotate(45deg);
+}
+
+/* Form Placeholder */
+/*=>--------------<=*/
+
+input.form-control::-webkit-input-placeholder {
+    color: $white-trans;
+}
+input.form-control::-moz-placeholder {
+    color: $white-trans;
+}
+input.form-control:-moz-placeholder {
+    color: $white-trans;
+}
+input.form-control:-ms-input-placeholder { 
+    color: $white-trans;
+}
+
+textarea.form-control::-webkit-input-placeholder {
+    color: $white-trans;
+}
+textarea.form-control::-moz-placeholder {
+    color: $white-trans;
+}
+textarea.form-control:-moz-placeholder {
+    color: $white-trans;
+}
+textarea.form-control:-ms-input-placeholder { 
+    color: $white-trans;
+}
+
 /* Media Queries */
-/*---------------*/
+/*=>-----------<=*/
 
 @media (min-width: 992px) {
 
     #panel {
         position: absolute;
-        top: 50%;
         left: 50%;
+        top: 50%;
         transform: translate(-50%,-50%);
     }
 
