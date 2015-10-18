@@ -9,20 +9,28 @@ Sequence of property-value pairs -- inner-box model (color, font-weight, etc), t
 /*=>-------<=*/
 
 $white-trans: rgba(255, 255, 255, 0.6);
+$font-size-form: 1.5em;
+$bg-trans: rgba(0,0,0,0);
+$border-style: 1px dashed white;
 $space-sm: 10px;
 $space-lg: 20px;
 
 /* Elements without classes and IDs */
 /*=>------------------------------<=*/
 
-*, h1, a,
-textarea.form-control,
-input.form-control {
+/* Class */
+* {
     color: white;
     font-weight: 100;
+    letter-spacing: 1px;
+}
+
+a {
+    @extend *;
 }
 
 h1 {
+    @extend *;
     font-size: 4em;
     margin: 0 0 $space-lg;
 }
@@ -100,30 +108,30 @@ h1 {
 /* Form */
 /*=>--<=*/
 
+/* Class */
+input.form-control {
+    @extend *;
+    color: white;
+    font-size: $font-size-form;
+    height: auto;
+    background-color: $bg-trans;
+    padding: 0.5em;
+    border: none;
+    border-bottom: $border-style;
+    border-radius: 0;
+}
+
 .form-group {
     margin-bottom: 0 0 $space-sm;
 }
 
-textarea.form-control,
-input.form-control,
-button.btn-default {
-    font-size: 1.5em;
-    letter-spacing: 1px;
-    padding: 0.5em;
-}
-
-textarea.form-control,
-input.form-control {
-    color: white;
-    height: auto;
-    background-color: rgba(0,0,0,0);
-    border: none;
-    border-bottom: 1px dashed white;
-    border-radius: 0;
+textarea.form-control {
+    @extend input.form-control;
 }
 
 button.btn-default {
-    font-weight: 100;
+    font-weight: 300;
+    font-size: $font-size-form;
     width: 100%;
     border-radius: 0;
 }
@@ -132,10 +140,10 @@ button.btn-default {
 /*=>----------<=*/
 
 .input-group-addon {
-    background-color: rgba(0,0,0,0);
+    background-color: $bg-trans;
     padding: 0.5em 0;
     border: none;
-    border-bottom: 1px dashed white;
+    border-bottom: $border-style;
     border-radius: 0;
 }
 
@@ -189,6 +197,7 @@ textarea.form-control:-ms-input-placeholder {
 }
 
 @media (max-width: 991px) {
+
     h1 {
         font-size: 2em;
     }
@@ -200,4 +209,5 @@ textarea.form-control:-ms-input-placeholder {
     #panel-left {
         margin-bottom: $space-lg;
     }
+    
 }
