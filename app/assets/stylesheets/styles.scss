@@ -91,9 +91,10 @@ h2 {
 /* Activities */
 /*=>--------<=*/
 
-%invert-colors {
+%link-highlight {
     color: black !important;
     background-color: $white-trans !important;
+    margin-right: -$space-sm;
 }
 
 .nav-pills {
@@ -106,17 +107,17 @@ h2 {
             }
         }
         a:active {
-            @extend %invert-colors;
+            @extend %link-highlight;
         }
         a:hover {
-            @extend %invert-colors;
+            @extend %link-highlight;
             .fa {
                 color: black;
             }
         }
     }
     li.active > a {
-        @extend %invert-colors;
+        @extend %link-highlight;
         .fa {
             color: black;
         }
@@ -220,7 +221,7 @@ textarea.form-control:-ms-input-placeholder {
     }
 
     #panel-left {
-        padding-right: 0;
+        /*padding-right: 0;*/
     }
 
     #panel-right {
