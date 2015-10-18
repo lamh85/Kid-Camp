@@ -219,6 +219,14 @@ textarea.form-control:-ms-input-placeholder {
         transform: translate(-50%,-50%);
     }
 
+    #panel-left {
+        padding-right: 0;
+    }
+
+    #panel-right {
+        border-left: 1px solid $white-trans;
+    }
+
 }
 
 @media (max-width: 991px) {
