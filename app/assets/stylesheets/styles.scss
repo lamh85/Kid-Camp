@@ -160,7 +160,8 @@ button.btn-default {
 .input-group-addon {
     background-color: $bg-trans;
     padding: $space-sm 0;
-    @extend %border-default;
+    border: none;
+    /*@extend %border-default;*/
 }
 
 .input-group-addon .fa {
