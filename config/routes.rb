@@ -2,6 +2,8 @@ Rails.application.routes.draw do
 
   root "pages#index"
 
+  get "chrome" => "pages#chrome"
+
   get "counselor" => "pages#counselor"
 
   get "stories" => "pages#stories"  

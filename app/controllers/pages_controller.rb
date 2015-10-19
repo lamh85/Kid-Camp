@@ -4,6 +4,10 @@ class PagesController < ApplicationController
     render 'index', layout: false
   end
 
+  def chrome
+    render 'index-chrome', layout: false
+  end
+
   def counselor
     render 'counselor'
   end
