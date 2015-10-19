@@ -220,10 +220,6 @@ textarea.form-control:-ms-input-placeholder {
         transform: translate(-50%,-50%);
     }
 
-    #panel-left {
-        /*padding-right: 0;*/
-    }
-
     #panel-right {
         border-left: 1px solid $white-trans;
     }
@@ -234,6 +230,10 @@ textarea.form-control:-ms-input-placeholder {
 
     h1 {
         font-size: 2em;
+    }
+
+    .nav-pills li a {
+        margin-right: 0 !important;
     }
 
     #panel {
