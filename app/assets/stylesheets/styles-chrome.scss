@@ -22,6 +22,8 @@ $space-lg: 30px;
     font-family: 'Roboto',"Helvetica Neue",Helvetica,Arial,sans-serif;    
     font-weight: 100;
     letter-spacing: 1px;
+    line-height: 1.25;
+    letter-spacing: 0.5px;
 }
 
 * {
@@ -165,7 +167,7 @@ button.btn-default {
 
 .input-group-addon {
     background-color: $bg-trans;
-    padding: $space-sm 0;
+    padding: 14px 0;
     @extend %border-default;
 }
 
